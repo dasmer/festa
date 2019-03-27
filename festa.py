@@ -32,7 +32,7 @@ for index, item in enumerate(items, start=0):
     html += "<div class='label-item-description'>"
     html += item["item_description"]
     html +=  "</div>"
-    html += "<div class='label-item-allergen-images     '>"
+    html += "<div class='label-item-allergen-images'>"
     if item["item_glutenfree"] == "TRUE":
         html += "<img src='images/gluten-free.png'>"
     if item["item_vegan"] == "TRUE":
