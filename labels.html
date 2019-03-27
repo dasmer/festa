@@ -1,0 +1,128 @@
+<html>
+<head>
+  <style>
+  .label-page {
+    margin: 5px;
+    background-color: lightblue;
+    max-width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+  }
+  .label-item-front, .label-item-back {
+    height: 2.5in;
+    width: 3.75in;
+    outline: 1px solid black;
+  }
+  .label-item-front {
+    background-color: red;
+  }
+  .label-item-back {
+    background-color: green;
+  }
+  .label-item-name {
+    /* background-color: yellow; */
+    display: block;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5em; /* 40px/16=2.5em */
+    position: relative;
+    top: 0.75in;
+  }
+  .label-item-description {
+    background-color: purple;
+    text-align: center;
+    position: relative;
+    top: 0.80in;
+  }
+  @media print {
+    @page {
+      size: letter portrait;
+    }
+    .label-page {
+      page-break-after: always
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="label-page">
+    <div class="label-item-back"></div>
+    <div class="label-item-back"></div>
+    <div class="label-item-front">
+      <div class="label-item-name">
+        1. Vegetable Pakora
+      </div>
+      <div class="label-item-description">
+        Fritters
+      </div>
+    </div>
+    <div class="label-item-front">
+      <div class="label-item-name">
+        2. Samosas
+      </div>
+      <div class="label-item-description">
+        Filled with Potatoes
+      </div>
+    </div>
+    <div class="label-item-back"></div>
+    <div class="label-item-back"></div>
+    <div class="label-item-front">
+      <div class="label-item-name">
+        3. Chicken Tikka Masala
+      </div>
+      <div class="label-item-description">
+        Chicken
+      </div>
+    </div>
+    <div class="label-item-front">
+      <div class="label-item-name">
+        4. Paneer Tikka Masala
+      </div>
+      <div class="label-item-description">
+        Cheese
+      </div>
+    </div>
+  </div>
+  <div class="label-page">
+    <div class="label-item-back"></div>
+    <div class="label-item-back"></div>
+    <div class="label-item-front">
+      <div class="label-item-name">
+        5. Chicken Curry
+      </div>
+      <div class="label-item-description">
+        Chicken
+      </div>
+    </div>
+    <div class="label-item-front">
+      <div class="label-item-name">
+        6. Saag Paneer
+      </div>
+      <div class="label-item-description">
+        Cheese
+      </div>
+    </div>
+    <div class="label-item-back"></div>
+    <div class="label-item-back"></div>
+      <div class="label-item-front">
+      <div class="label-item-name">
+        5. Chicken Curry
+      </div>
+      <div class="label-item-description">
+        Chicken
+      </div>
+    </div>
+    <div class="label-item-front">
+      <div class="label-item-name">
+        6. Saag Paneer
+      </div>
+      <div class="label-item-description">
+        Cheese
+      </div>
+    </div>
+  </div>
+</body>
+</html>
