@@ -4,16 +4,22 @@
   .label-page {
     margin: 5px;
     background-color: lightblue;
-    max-width: 850px;
+    max-width: 8.5in;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-content: space-between;
   }
-  .label-item-front, .label-item-back {
-    height: 2.5in;
+  .label-item {
+    height: 5in;
     width: 3.75in;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .label-item-front, .label-item-back {
+    height: 50%;
+    width: 100%;
     outline: 1px solid black;
   }
   .label-item-front {
@@ -49,78 +55,94 @@
 </head>
 <body>
   <div class="label-page">
-    <div class="label-item-back"></div>
-    <div class="label-item-back"></div>
-    <div class="label-item-front">
-      <div class="label-item-name">
-        1. Vegetable Pakora
-      </div>
-      <div class="label-item-description">
-        Fritters
-      </div>
-    </div>
-    <div class="label-item-front">
-      <div class="label-item-name">
-        2. Samosas
-      </div>
-      <div class="label-item-description">
-        Filled with Potatoes
+    <div class="label-item">
+      <div class="label-item-back"></div>
+      <div class="label-item-front">
+        <div class="label-item-name">
+          1. Vegetable Pakora
+        </div>
+        <div class="label-item-description">
+          Fritters
+        </div>
       </div>
     </div>
-    <div class="label-item-back"></div>
-    <div class="label-item-back"></div>
-    <div class="label-item-front">
-      <div class="label-item-name">
-        3. Chicken Tikka Masala
-      </div>
-      <div class="label-item-description">
-        Chicken
+    <div class="label-item">
+      <div class="label-item-back"></div>
+      <div class="label-item-front">
+        <div class="label-item-name">
+          2. Samosas
+        </div>
+        <div class="label-item-description">
+          Filled with Potatoes
+        </div>
       </div>
     </div>
-    <div class="label-item-front">
-      <div class="label-item-name">
-        4. Paneer Tikka Masala
+    <div class="label-item">
+      <div class="label-item-back"></div>
+      <div class="label-item-front">
+        <div class="label-item-name">
+          3. Vegetable Pakora
+        </div>
+        <div class="label-item-description">
+          Fritters
+        </div>
       </div>
-      <div class="label-item-description">
-        Cheese
+    </div>
+    <div class="label-item">
+      <div class="label-item-back"></div>
+      <div class="label-item-front">
+        <div class="label-item-name">
+          4. Samosas
+        </div>
+        <div class="label-item-description">
+          Filled with Potatoes
+        </div>
       </div>
     </div>
   </div>
   <div class="label-page">
-    <div class="label-item-back"></div>
-    <div class="label-item-back"></div>
-    <div class="label-item-front">
-      <div class="label-item-name">
-        5. Chicken Curry
-      </div>
-      <div class="label-item-description">
-        Chicken
-      </div>
-    </div>
-    <div class="label-item-front">
-      <div class="label-item-name">
-        6. Saag Paneer
-      </div>
-      <div class="label-item-description">
-        Cheese
-      </div>
-    </div>
-    <div class="label-item-back"></div>
-    <div class="label-item-back"></div>
+    <div class="label-item">
+      <div class="label-item-back"></div>
       <div class="label-item-front">
-      <div class="label-item-name">
-        5. Chicken Curry
-      </div>
-      <div class="label-item-description">
-        Chicken
+        <div class="label-item-name">
+          1. Vegetable Pakora
+        </div>
+        <div class="label-item-description">
+          Fritters
+        </div>
       </div>
     </div>
-    <div class="label-item-front">
-      <div class="label-item-name">
-        6. Saag Paneer
+    <div class="label-item">
+      <div class="label-item-back"></div>
+      <div class="label-item-front">
+        <div class="label-item-name">
+          2. Samosas
+        </div>
+        <div class="label-item-description">
+          Filled with Potatoes
+        </div>
       </div>
-      <div class="label-item-description">
-        Cheese
+    </div>
+    <div class="label-item">
+      <div class="label-item-back"></div>
+      <div class="label-item-front">
+        <div class="label-item-name">
+          3. Vegetable Pakora
+        </div>
+        <div class="label-item-description">
+          Fritters
+        </div>
+      </div>
+    </div>
+    <div class="label-item">
+      <div class="label-item-back"></div>
+      <div class="label-item-front">
+        <div class="label-item-name">
+          4. Samosas
+        </div>
+        <div class="label-item-description">
+          Filled with Potatoes
+        </div>
       </div>
     </div>
   </div>
