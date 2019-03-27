@@ -1,12 +1,14 @@
 import sys
 import csv
 import io
+import os
 
 from bs4 import BeautifulSoup
 
 title = sys.argv[1]
 csv_file_name = sys.argv[2]
 back_text_file_name = sys.argv[3]
+output_file_name = sys.argv[4]
 
 file = open(back_text_file_name, "r")
 back_text = "<br />".join(file.read().split("\n"))
@@ -64,6 +66,8 @@ html += "</body></html>"
 soup = BeautifulSoup(html, "html.parser")
 html = soup.prettify()
 
-html_file = open("output.html", "w")
+html_file = open(output_file_name, "w")
 html_file.write(html)
 html_file.close()
+
+os.system("open "+ output_file_name)
