@@ -20,13 +20,19 @@
   .label-item-front, .label-item-back {
     height: 50%;
     width: 100%;
-    outline: 1px solid black;
+    outline: 0.5mm solid black;
   }
   .label-item-front {
     background-color: red;
+    position: relative;
   }
   .label-item-back {
     background-color: green;
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    transform:rotate(180deg);
   }
   .label-item-name {
     /* background-color: yellow; */
@@ -38,10 +44,19 @@
     top: 0.75in;
   }
   .label-item-description {
-    background-color: purple;
     text-align: center;
     position: relative;
     top: 0.80in;
+  }
+  .label-item-allergen-images{
+    flex-direction: row;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  img {
+    width: 0.5in;
+    height: 0.5in;
   }
   @media print {
     @page {
@@ -63,6 +78,10 @@
         </div>
         <div class="label-item-description">
           Fritters
+        </div>
+        <div class="label-item-allergen-images">
+          <img src="images/gluten-free.png">
+          <img src="images/vegan.png">
         </div>
       </div>
     </div>
