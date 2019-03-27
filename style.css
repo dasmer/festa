@@ -1,11 +1,14 @@
+body {
+  max-width: 8.5in;
+  margin: auto;
+}
 .label-page {
   margin: 5px;
   background-color: lightblue;
-  max-width: 8.5in;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-content: space-between;
 }
 .label-item {
@@ -44,6 +47,8 @@
   text-align: center;
   position: relative;
   top: 0.80in;
+  margin-left: 2mm;
+  margin-right: 2mm;
 }
 .label-item-allergen-images{
   flex-direction: row;
