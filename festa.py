@@ -4,8 +4,16 @@ import io
 
 from bs4 import BeautifulSoup
 
+title = sys.argv[1]
+csv_file_name = sys.argv[2]
+back_text_file_name = sys.argv[3]
+
+file = open(back_text_file_name, "r")
+back_text = "<br />".join(file.read().split("\n"))
+file.close()
+
 css = open('style.css').read()
-csv = csv.DictReader(io.open(sys.argv[1], "r", encoding = "utf-8-sig"))
+csv = csv.DictReader(io.open(csv_file_name, "r", encoding = "utf-8-sig"))
 
 html = "<html><head><style>" + css + "</style></head><body>"
 
@@ -24,8 +32,15 @@ for index, item in enumerate(items, start=0):
         html +=  "<div class='label-page'>"
 
     html += "<div class='label-item'>"
-    html += "<div class='label-item-back'></div>"
+    html += "<div class='label-item-back'>"
+    html += "<div class='label-item-back-text'>"
+    html += back_text
+    html +=  "</div>"
+    html +=  "</div>"
     html += "<div class='label-item-front'>"
+    html += "<div class='label-item-title'>"
+    html += title
+    html +=  "</div>"
     html += "<div class='label-item-name'>"
     html += item["item_name"]
     html +=  "</div>"
