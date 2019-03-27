@@ -3,8 +3,13 @@ body {
   margin: auto;
   font-family: Verdana, Arial, Sans-serif;
 }
-.label-page {
+.cover-page, .label-page {
   margin: 0.5in;
+}
+.cover-page {
+  font-size: 1.5em;
+}
+.label-page {
   background-color: lightblue;
   display: flex;
   flex-wrap: wrap;
@@ -81,7 +86,7 @@ img {
   @page {
     size: letter portrait;
   }
-  .label-page {
+  .cover-page, .label-page {
     page-break-after: always
   }
 }

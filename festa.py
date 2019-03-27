@@ -18,16 +18,19 @@ css = open('style.css').read()
 csv = csv.DictReader(io.open(csv_file_name, "r", encoding = "utf-8-sig"))
 
 html = "<html><head><style>" + css + "</style></head><body>"
-
+html += "<div class='cover-page'><b>Labels</b><br />"
 items = []
 
 for item in csv:
     i = 0
     quantity = item["quantity"]
     quantity = 0 if quantity == "" else int(quantity)
+    if quantity > 0:
+        html += str(quantity) + " " + item["item_name"] + "<br />"
     while i < quantity:
         items.append(item)
         i += 1;
+html += "</div>"
 
 for index, item in enumerate(items, start=0):
     if index % 4 == 0:
