@@ -1,0 +1,65 @@
+.label-page {
+  margin: 5px;
+  background-color: lightblue;
+  max-width: 8.5in;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+}
+.label-item {
+  height: 5in;
+  width: 3.75in;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.label-item-front, .label-item-back {
+  height: 50%;
+  width: 100%;
+  outline: 0.5mm solid black;
+}
+.label-item-front {
+  background-color: red;
+  position: relative;
+}
+.label-item-back {
+  background-color: green;
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+.label-item-name {
+  /* background-color: yellow; */
+  display: block;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5em; /* 40px/16=2.5em */
+  position: relative;
+  top: 0.75in;
+}
+.label-item-description {
+  text-align: center;
+  position: relative;
+  top: 0.80in;
+}
+.label-item-allergen-images{
+  flex-direction: row;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+img {
+  width: 0.5in;
+  height: 0.5in;
+}
+@media print {
+  @page {
+    size: letter portrait;
+  }
+  .label-page {
+    page-break-after: always
+  }
+}
