@@ -4,7 +4,7 @@ Festa generates catering labels from a CSV spreadsheet of items.
 
 ![CSV to Print/PDF Ready HTML Converter](readme-images/convert.jpg)
 
-## Create catering labels
+## Create
 
 To start, create a spreadsheet with column names: `item_quantity`, `item_name`, `item_description`, `item_vegan`, `item_glutenfree`. Specify the number of labels to generate with `item_quantity`. Save the spreadsheet as a CSV.
 
