@@ -12,12 +12,12 @@ Next, create a TXT file and save the text to be generated on the back of all of 
 
 Clone this repository in command line:
 
-```
+```bash
 git clone https://github.com/dasmer/festa.git
 cd festa
 ```
 Then copy and paste your CSV data file and the back of label TXT file to the newly cloned `festa` folder. Before running the python script, make sure you have [Beautiful Soup][1] installed. Next, run:
-```
+```bash
 python festa.py "[RESTAURANT-TITLE]" [CSV-MENU-NAME].csv [BACK-TEXT-NAME].txt [OUTPUT-LABELS-HTML-NAME].html
 ```
 where
@@ -34,7 +34,7 @@ Print (or save to PDF). Make sure to set margins to 0 in Chrome's print settings
 
 To run the example, type the following in command line:
 
-```
+```bash
 python festa.py "Matteo's" example/labels_data.csv example/back_text.txt matteos_labels.html
 ```
 
