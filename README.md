@@ -2,7 +2,7 @@
 
 Festa generates catering labels from a CSV spreadsheet of items.
 
-![CSV to Print/PDF Ready HTML Converter](images/convert.jpg)
+![CSV to Print/PDF Ready HTML Converter](readme-images/convert.jpg)
 
 ## Create catering labels
 
