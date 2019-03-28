@@ -23,7 +23,7 @@ items = []
 
 for item in csv:
     i = 0
-    quantity = item["quantity"]
+    quantity = item["item_quantity"]
     quantity = 0 if quantity == "" else int(quantity)
     if quantity > 0:
         html += str(quantity) + " " + item["item_name"] + "<br />"
