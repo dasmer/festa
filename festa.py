@@ -10,12 +10,21 @@ csv_file_name = sys.argv[2]
 back_text_file_name = sys.argv[3]
 output_file_name = sys.argv[4]
 
+# Creates a temporary csv file that has no non-ascii characters
+clean_csv_file_name = "festa_clean_" + csv_file_name
+with io.open(csv_file_name,'r',encoding='utf-8',errors='ignore') as infile, \
+     io.open(clean_csv_file_name,'w',encoding='ascii',errors='ignore') as outfile:
+    for line in infile:
+        print(*line.split(), file=outfile)
+infile.close()
+outfile.close()
+
 file = open(back_text_file_name, "r")
 back_text = "<br />".join(file.read().split("\n"))
 file.close()
 
 css = open('style.css').read()
-csv = csv.DictReader(io.open(csv_file_name, "r", encoding = "utf-8-sig"))
+csv = csv.DictReader(io.open(clean_csv_file_name, "r", encoding = "utf-8-sig"))
 
 html = "<html><head><style>" + css + "</style></head><body>"
 html += "<div class='cover-page'><b>Labels</b><br />"
@@ -73,4 +82,5 @@ html_file = open(output_file_name, "w")
 html_file.write(html)
 html_file.close()
 
+os.remove(clean_csv_file_name)
 os.system("open "+ output_file_name)
