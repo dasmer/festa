@@ -38,7 +38,7 @@ To run the example, type the following in command line:
 python festa.py "Matteo's" example/labels_data.csv example/back_text.txt matteos_labels.html
 ```
 
-Open the generated `matteos_labels.html` in Chrome to print the example catering labels. 
+Open the generated `matteos_labels.html` in Chrome to print the example catering labels.
 
 
 ## Contributing
