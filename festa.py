@@ -10,6 +10,9 @@ csv_file_name = sys.argv[2]
 back_text_file_name = sys.argv[3]
 output_file_name = sys.argv[4]
 
+show_title = title != "none"
+show_global_back_text = back_text_file_name!= "none"
+
 # Creates a temporary csv file that has no non-ascii characters
 clean_csv_file_name = "festa_clean_" + csv_file_name
 with io.open(csv_file_name,'r',encoding='utf-8',errors='ignore') as infile, \
@@ -19,9 +22,10 @@ with io.open(csv_file_name,'r',encoding='utf-8',errors='ignore') as infile, \
 infile.close()
 outfile.close()
 
-file = open(back_text_file_name, "r")
-back_text = "<br />".join(file.read().split("\n"))
-file.close()
+if show_global_back_text:
+    file = open(back_text_file_name, "r")
+    back_text = "<br />".join(file.read().split("\n"))
+    file.close()
 
 css = open('style.css').read()
 csv = csv.DictReader(io.open(clean_csv_file_name, "r", encoding = "utf-8-sig"))
@@ -42,19 +46,37 @@ for item in csv:
 html += "</div>"
 
 for index, item in enumerate(items, start=0):
+
+    item_is_glutenfree = item["item_glutenfree"] == "TRUE"
+    item_is_vegan = item["item_vegan"] == "TRUE"
+
     if index % 4 == 0:
         html +=  "<div class='label-page'>"
 
     html += "<div class='label-item'>"
     html += "<div class='label-item-back'>"
     html += "<div class='label-item-back-text'>"
-    html += back_text
+    if show_global_back_text:
+        html += back_text
+    else:
+        html += "THIS SIDE BACK<br />"
+        html += "<h1>" + item["item_name"] + "<br /></h1>"
+        html += item["item_description"] + "<br />"
+        if item_is_glutenfree:
+            html +=  "<b>Item IS GLUTEN-FREE. </b><br />"
+        else:
+            html +=  "<b>Item IS NOT GLUTEN-FREE. </b><br />"
+        if item_is_vegan:
+            html +=  "<b>Item IS VEGAN. </b><br />"
+        else:
+            html +=  "<b>Item IS NOT VEGAN. </b><br />"
     html +=  "</div>"
     html +=  "</div>"
     html += "<div class='label-item-front'>"
-    html += "<div class='label-item-title'>"
-    html += title
-    html +=  "</div>"
+    if show_title:
+        html += "<div class='label-item-title'>"
+        html += title
+        html +=  "</div>"
     html += "<div class='label-item-name'>"
     html += item["item_name"]
     html +=  "</div>"
@@ -62,10 +84,10 @@ for index, item in enumerate(items, start=0):
     html += item["item_description"]
     html +=  "</div>"
     html += "<div class='label-item-allergen-images'>"
-    if item["item_glutenfree"] == "TRUE":
-        html += "<img src='images/gluten-free.png'>"
-    if item["item_vegan"] == "TRUE":
-        html += "<img src='images/vegan.png'>"
+    if item_is_glutenfree:
+        html += "<img src='html-images/gluten-free.png'>"
+    if item_is_vegan:
+        html += "<img src='html-images/vegan.png'>"
     html +=  "</div>"
     html +=  "</div>"
     html +=  "</div>"
