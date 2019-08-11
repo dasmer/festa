@@ -3,37 +3,32 @@ body {
   margin: auto;
   font-family: Verdana, Arial, Sans-serif;
 }
-.cover-page, .label-page {
+.cover-page, .label-page-front, .label-page-back {
   margin: 0.5in;
 }
 .cover-page {
   font-size: 1.5em;
 }
-.label-page {
+.label-page-front, .label-page-back {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-content: space-between;
 }
-.label-item {
-  height: 5in;
+.label-page-front {
+  direction: ltr;
+}
+.label-page-back {
+  direction: rtl;
+}
+.label-item-front, .label-item-back {
+  height: 2.5in;
   width: 3.75in;
   flex-wrap: wrap;
   flex-direction: column;
-}
-.label-item-front, .label-item-back {
-  height: 50%;
-  width: 100%;
   outline: 0.5mm solid black;
   position: relative;
-}
-.label-item-back {
-  -webkit-transform:rotate(180deg);
-  -moz-transform:rotate(180deg);
-  -o-transform:rotate(180deg);
-  -ms-transform:rotate(180deg);
-  transform:rotate(180deg);
 }
 .label-item-back-text {
   display: inline-block;
@@ -82,7 +77,7 @@ img {
   @page {
     size: letter portrait;
   }
-  .cover-page, .label-page {
+  .cover-page, .label-page-front, .label-page-back {
     page-break-after: always
   }
 }

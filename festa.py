@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import sys
 import csv
 import io
@@ -5,13 +7,10 @@ import os
 
 from bs4 import BeautifulSoup
 
-title = sys.argv[1]
-csv_file_name = sys.argv[2]
-back_text_file_name = sys.argv[3]
-output_file_name = sys.argv[4]
+csv_file_name = sys.argv[1]
+output_file_name = sys.argv[2]
+title = sys.argv[3]
 
-show_title = title != "none"
-show_global_back_text = back_text_file_name!= "none"
 
 # Creates a temporary csv file that has no non-ascii characters
 clean_csv_file_name = "festa_clean_" + csv_file_name
@@ -21,11 +20,6 @@ with io.open(csv_file_name,'r',encoding='utf-8',errors='ignore') as infile, \
         print(*line.split(), file=outfile)
 infile.close()
 outfile.close()
-
-if show_global_back_text:
-    file = open(back_text_file_name, "r")
-    back_text = "<br />".join(file.read().split("\n"))
-    file.close()
 
 css = open('style.css').read()
 csv = csv.DictReader(io.open(clean_csv_file_name, "r", encoding = "utf-8-sig"))
@@ -45,57 +39,117 @@ for item in csv:
         i += 1;
 html += "</div>"
 
-for index, item in enumerate(items, start=0):
+CARDS_PER_PAGE = 8
 
-    item_is_glutenfree = item["item_glutenfree"] == "TRUE"
-    item_is_vegan = item["item_vegan"] == "TRUE"
+filled_cards_count = len(items) * 2
+empty_cards_count = filled_cards_count % (2 * CARDS_PER_PAGE)
+total_cards_count = filled_cards_count + empty_cards_count
+print(total_cards_count)
+blank_item = {
+"item_name": "",
+"item_description": "",
+"item_vegan": "FALSE",
+"item_glutenfree": "FALSE",
+"item_additional_backtext": ""
+}
 
-    if index % 4 == 0:
-        html +=  "<div class='label-page'>"
+blank_i = 0
+while blank_i < empty_cards_count:
+    items.append(blank_item)
+    blank_i += 1
 
-    html += "<div class='label-item'>"
-    html += "<div class='label-item-back'>"
-    html += "<div class='label-item-back-text'>"
-    if show_global_back_text:
-        html += back_text
-    else:
-        html += "THIS SIDE BACK<br />"
-        html += "<h1>" + item["item_name"] + "<br /></h1>"
-        html += item["item_description"] + "<br />"
-        if item_is_glutenfree:
-            html +=  "<b>Item IS GLUTEN-FREE. </b><br />"
-        else:
-            html +=  "<b>Item IS NOT GLUTEN-FREE. </b><br />"
-        if item_is_vegan:
-            html +=  "<b>Item IS VEGAN. </b><br />"
-        else:
-            html +=  "<b>Item IS NOT VEGAN. </b><br />"
-    html +=  "</div>"
-    html +=  "</div>"
-    html += "<div class='label-item-front'>"
-    if show_title:
+iteration = 0
+while iteration < total_cards_count:
+    print(iteration)
+    quotient_small = iteration / CARDS_PER_PAGE
+    quotient_large = iteration / (CARDS_PER_PAGE * 2)
+    is_back_card = ((quotient_small % 2) == 1) # is_back_card is TRUE if quotient is odd
+    adjustment = quotient_large * CARDS_PER_PAGE
+    adjusted_index = iteration - adjustment if is_back_card == False else iteration - adjustment - CARDS_PER_PAGE
+    item = items[adjusted_index]
+
+    # if iteration % CARDS_PER_PAGE == 0:
+    #     html +=  "<div class='label-page'>"
+
+    if not is_back_card:
+        if iteration % CARDS_PER_PAGE == 0:
+            html +=  "<div class='label-page-front'>"
+
+        print(item["item_name"])
+        html += "<div class='label-item-front'>"
         html += "<div class='label-item-title'>"
+        html += "<b>"
         html += title
+        html += "</b>"
         html +=  "</div>"
-    html += "<div class='label-item-name'>"
-    html += item["item_name"]
-    html +=  "</div>"
-    html += "<div class='label-item-description'>"
-    html += item["item_description"]
-    html +=  "</div>"
-    html += "<div class='label-item-allergen-images'>"
-    if item_is_glutenfree:
-        html += "<img src='html-images/gluten-free.png'>"
-    if item_is_vegan:
-        html += "<img src='html-images/vegan.png'>"
-    html +=  "</div>"
-    html +=  "</div>"
-    html +=  "</div>"
-
-    if index % 4 == 3   :
+        html += "<div class='label-item-name'>"
+        html += item["item_name"]
         html +=  "</div>"
+        html += "<div class='label-item-description'>"
+        html += item["item_description"]
+        html +=  "</div>"
+        html += "<div class='label-item-allergen-images'>"
+        if item["item_glutenfree"] == "TRUE":
+            html += "<img src='html-images/gluten-free.png'>"
+        if item["item_vegan"] == "TRUE":
+            html += "<img src='html-images/vegan.png'>"
+        html +=  "</div>"
+        html +=  "</div>"
+    else:
+        if iteration % CARDS_PER_PAGE == 0:
+            html +=  "<div class='label-page-back'>"
 
+        html += "<div class='label-item-back'>"
+        html += "<div class='label-item-back-text'>"
+        html += "BACKSIDE"
+        html += "<h1>" + item["item_name"] + "</h1>"
+        html += "<h4>" + item["item_description"] + "</h4>"
+        if item["item_glutenfree"] == "TRUE":
+            html += "IS GLUTEN-FREE<br />"
+        else:
+            html += "IS-NOT GLUTEN-FREE<br />"
+        if item["item_vegan"] == "TRUE":
+            html += "IS VEGAN"
+        else:
+            html += "IS-NOT VEGAN"
+        html += "</div>"
+        html += "</div>"
 
+    if iteration % CARDS_PER_PAGE == CARDS_PER_PAGE - 1:
+        html +=  "</div>"
+    iteration += 1
+
+# for index, item in enumerate(items, start=0):
+#     if index % 8 == 0:
+#     html +=  "<div class='label-page'>"
+#
+#     html += "<div class='label-item-back'>"
+#     html += "<div class='label-item-back-text'>"
+#     html += back_text
+#     html +=  "</div>"
+#     html +=  "</div>"
+#     html += "<div class='label-item-front'>"
+#     html += "<div class='label-item-title'>"
+#     html += title
+#     html +=  "</div>"
+#     html += "<div class='label-item-name'>"
+#     html += item["item_name"]
+#     html +=  "</div>"
+#     html += "<div class='label-item-description'>"
+#     html += item["item_description"]
+#     html +=  "</div>"
+#     html += "<div class='label-item-allergen-images'>"
+#     if item["item_glutenfree"] == "TRUE":
+#         html += "<img src='html-images/gluten-free.png'>"
+#     if item["item_vegan"] == "TRUE":
+#         html += "<img src='html-images/vegan.png'>"
+#     html +=  "</div>"
+#     html +=  "</div>"
+#
+#     if index % 4 == 7   :
+#         html +=  "</div>"
+#
+#
 html += "</body></html>"
 soup = BeautifulSoup(html, "html.parser")
 html = soup.prettify()
