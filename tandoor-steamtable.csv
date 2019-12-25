@@ -1,0 +1,33 @@
+﻿item_quantity,item_name,item_description,item_vegan,item_glutenfree
+1,Channa Masala,Chickpeas cooked with traditional homemade spices,TRUE,TRUE
+1,Daal Makhni,Lentils simmered with spices & topped with butter,FALSE,TRUE
+1,Alu Matar,Potatoes & green peas seasoned with masala,TRUE,TRUE
+1,Saag Paneer,Homemade cubes of cheese smothered in fresh ground spinach,FALSE,TRUE
+1,Baingan Bhartha,Baked eggplant & tomatoes cooked in herbs & spices,TRUE,TRUE
+1,Chicken Tikka Masala,Grilled boneless chicken simmered in fenugreek flavored plum tomato sauce,FALSE,TRUE
+1,Chicken Curry,Pieces of chicken slow-cooked in punjabi spices with a rich onion sauce,FALSE,TRUE
+1,Navrattan Korma,"Mixed vegetables cooked in delicate spices, tomatoes and onions.",TRUE,TRUE
+1,Sambar,A lentil-based vegetable stew or chowder based on a broth made with tamarind,TRUE,TRUE
+1,Cabbage Peas,"Cabbage and peas immersed in ginger and spices including ginger, cumin, coriander and turmeric",TRUE,TRUE
+1,Keema Peas,Ground meat cooked with peas.,FALSE,TRUE
+1,Coriander Chicken,Boneless chicken in a coriander and cilantro sauce,FALSE,TRUE
+1,Chicken Makhani,White chicken breast in a creamy tomato sauce.,FALSE,TRUE
+1,Lamb Curry,Lamb in an onion gravy with freshly ground spices.,FALSE,TRUE
+1,Kadhi Pakora,A stew made with yogurt and chickpeas flour seasoned with spices,FALSE,TRUE
+1,Paneer Kadai,"Cubes of homemade cheese cooked with onions, tomatoes and green pepper.",FALSE,TRUE
+1,Saag Alu,Potatoes smothered in freshly ground spinach.,TRUE,TRUE
+1,Egg Curry,Boiled eggs cooked in freshly ground spices and onion gravy. ​,FALSE,TRUE
+1,Achari Baingan,Eggplant cooked with a flavorful blend of pickle spices and tomatoes.,TRUE,TRUE
+1,Shahi Mushroom,Mushrooms cooked in a creamy tomato sauce.,FALSE,TRUE
+1,Veg Biryani,Spiced mixed vegetables cooked in basmati rice.,TRUE,TRUE
+1,Sarso Ka Saag,Spinach cooked with mustard greens.,TRUE,TRUE
+1,Ginger Chicken,Chicken breast in a ginger sauce.,FALSE,TRUE
+1,Goat Masala,Goat (on the bone) in an onion gravy with freshly ground spices.,FALSE,TRUE
+1,Matar Paneer,Homemade cottage cheese and peas cooked ina tomato and onion sauce,FALSE,TRUE
+1,Bhindi Alu,Okra and potatoes cooked with cumin.,TRUE,TRUE
+1,Tadka Daal,"Masoor daals (lentils) simmered with green chilies, turmeric and cumin.",TRUE,TRUE
+1,Methi Chicken,"Boneless chicken tenderly cooked in methi, fresh garlic and herbs.",FALSE,TRUE
+1,Alu Phalia,Cooked string beans and potatoes.,TRUE,TRUE
+1,Rajma,Red Kidney Beans Stew.,TRUE,TRUE
+1,Alu Matar,Potatoes and peas in mild spiced sauce.,TRUE,TRUE
+1,Chicken Kadai,"Boneless chicken cooked with onions, tomatoes and green pepper.",FALSE,TRUE

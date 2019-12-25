@@ -1,0 +1,8 @@
+item_quantity,item_name,item_description,item_vegan,item_glutenfree
+2,Garden Salad,"Fresh lettuce, tomatoes, cucumbers and lemon",TRUE,TRUE
+1,Chicken Parmesan,Breaded chicken breast served over pasta.,FALSE,FALSE
+4,Penne Alla Vodka,"Penne pasta made with heavy cream, crushed tomatoes, and onions.",FALSE,FALSE
+0,Chicken Antonio,"Breaded chicken breast sauteed with garlic and mushrooms in a lemon & butter garlic sauce served over your choice of pasta. Add a side and/or salad, drinks and perhaps dessert, and you're all set.",FALSE,FALSE
+0,Vegetable Crudite,Assorted vegetables. Served with basil aioli.,TRUE,TRUE
+0,Polpette Meatballs,"With Black Angus beef, Berkshire pork, and San Marzano tomatoes.",FALSE,TRUE
+,Margherita Pizza,"With mozzarella, San Marzano tomatoes, and basil.",FALSE,FALSE

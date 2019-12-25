@@ -1,0 +1,88 @@
+item_quantity,item_name,item_description,item_vegan,item_glutenfree
+0,Chili Gobi ,Cauliflower prepared with fresh herbs & chili peppers,TRUE,TRUE
+0,Vegetable Fried Rice ,Basmati rice stir-fried and seasoned to perfection with vegetables,TRUE,FALSE
+0,Vegetable Hakka Noodles ,Hakka style Chinese noodles,TRUE,FALSE
+0,Chili Garlic Vegetable Noodles ,"Whole wheat noodles with assorted vegetables, peppers and garlic",TRUE,FALSE
+0,Chili Potatoes ,Potatoes prepared with fresh herbs & chili peppers,TRUE,TRUE
+0,Stir-fried Vegetables In Garlic Sauce ,Assorted vegetables in garlic sauce,TRUE,TRUE
+0,Vegetable Manchurian ,Balls of ground vegetables in a Manchurian sauce,TRUE,TRUE
+0,Vegetable Chili Tofu ,Tofu prepared with fresh herbs & chili peppers and served with assorted vegetables,TRUE,TRUE
+0,Lollipop Chicken ,Fried drumsticks glazed with soy sauce and garlic,FALSE,TRUE
+0,Chicken Hakka Noodles ,Hakka style Chinese noodles with chicken,FALSE,FALSE
+0,Sweet And Sour Chicken ,Diced chicken breast lightly stir-fried with a tangy sweet & spice sauce,FALSE,FALSE
+0,Hot Garlic Chicken ,Sautéed chicken breast in a spicy garlic sauce,FALSE,TRUE
+0,Basil Ginger Chicken ,Sautéed chicken breast prepared with garlic sauce and basil,FALSE,TRUE
+0,Chicken Fried Rice ,Basmati rice stir-fried and seasoned to perfection with chicken,FALSE,FALSE
+0,Chili Chicken ,Tender pieces of chicken prepared with fresh herbs & chili peppers,FALSE,TRUE
+0,Chili Garlic Chicken Noodles ,"Whole wheat noodles with chicken, peppers and garlic",FALSE,FALSE
+0,General Tso Chicken ,Cubes of boneless chicken deep fried and then glazed with the famous General Tso's sauce,FALSE,TRUE
+0,Schezwan Chicken ,Sautéed chicken breast with vegetables in a schezwan sauce,FALSE,TRUE
+0,Shrimp Fried Rice ,Basmati rice stir-fried and seasoned to perfection with shrimp,FALSE,FALSE
+0,Basil Ginger Shrimp ,Sautéed shrimp prepared with garlic sauce and basil,FALSE,TRUE
+0,Chili Garlic Shrimp Noodles ,"Whole wheat noodles with shrimp, peppers and garlic",FALSE,FALSE
+0,Hot Garlic Shrimp ,Jumbo shrimp in a spicy garlic sauce,FALSE,TRUE
+0,Schezwan Shrimp ,Sautéed shrimp with vegetables in a schezwan sauce,FALSE,TRUE
+0,Chicken Biryani ,Basmati rice with tender pieces of chicken and spices,FALSE,FALSE
+0,Tandoori Chicken ,Grilled tender chicken marinated in yogurt & mild spices,FALSE,TRUE
+0,Chicken Curry ,Pieces of chicken slow-cooked in punjabi spices with a rich onion sauce,FALSE,TRUE
+0,Chicken Korma ,Chicken cooked in a creamy sauce,FALSE,TRUE
+0,Chicken Vindaloo ,"Chicken cooked with vinegar, hot chilies and spices",FALSE,TRUE
+1,Chicken Tikka Masala ,Grilled boneless chicken simmered in fenugreek flavored plum tomato sauce,FALSE,TRUE
+0,Chicken Manglorean ,"Chicken pieces slow-cooked in coriander, methi & garlic sauce",FALSE,TRUE
+0,Chicken Kadai ,"Chicken sautéed with onion, tomatoes & green pepper",FALSE,TRUE
+1,Lamb Vindaloo ,"Lamb cooked with vinegar, hot chilies & spices",FALSE,TRUE
+0,Lamb Korma ,Lamb cooked in a mild creamy sauce,FALSE,TRUE
+0,Rogan Josh ,Lamb in cardamom aniseed & paprika flavored sauce,FALSE,TRUE
+0,Lamb Kolhapori ,"Lamb simmered in a spicy curry of red chili, coconut, star anise & white poppy seeds",FALSE,TRUE
+0,Lamb Bhuna ,"Lamb cooked in tomatoes, onion & green pepper",FALSE,TRUE
+0,Lamb Biryani ,Basmati rice with tender pieces of lamb and spices,FALSE,FALSE
+0,Goat Handi ,Goat cooked in traditional spices,FALSE,TRUE
+0,Goat Biryani ,Basmati rice with flavored tender pieces of goat and spices,FALSE,FALSE
+0,Anjeer Kofta ,Balls of vegetables & fig in a rich onion sauce,TRUE,TRUE
+0,Vegetable Zalfrazie ,Fresh sautéed mixed vegetables cooked with exotic spices,TRUE,TRUE
+0,Baingan Bhartha ,Baked eggplant & tomatoes cooked in herbs & spices,TRUE,TRUE
+1,Palak Paneer ,Homemade cubes of cheese smothered in fresh ground spinach,FALSE,TRUE
+0,Bhindi Do Piyaza ,Fresh okra & onions seasoned with a blend of spices,TRUE,TRUE
+0,Matar Paneer ,Homemade cottage cheese and peas cooked ina tomato and onion sauce,FALSE,TRUE
+0,Methi Malaimatar ,Fenugreek and green peas cooked in a delicious sauce,FALSE,TRUE
+0,Channa Masala ,Chickpeas cooked with traditional homemade spices,TRUE,TRUE
+1,Daal Makhni ,Lentils simmered with spices & topped with butter,FALSE,TRUE
+1,Alu Gobi Matar,"Potatoes, cauliflower & green peas seasoned with masala",TRUE,TRUE
+0,Paneer Makhani ,Paneer simmered in fenugreek flavored plum tomato sauce,FALSE,TRUE
+1,Vegetable Samosa ,Cumin flavored potatoes & peas in a flaky pastry,TRUE,FALSE
+0,Lasuni Gobi ,Crispy florets of cauliflower with chili flakes & a garlic-tomato chutney sauce,TRUE,FALSE
+0,Paneer Tikka ,"Tandoor-grilled cottage cheese marinated in yogurt, pomegranate, and spices",FALSE,TRUE
+0,Chicken Samosa ,Seasoned ground chicken in a flaky pastry,FALSE,FALSE
+0,Chicken Kabab ,Tandoor-roasted ground chicken seasoned with mint & herbs rolled on a skewer,FALSE,TRUE
+0,Chakundri Chicken Tikka ,Pieces of boneless tender grilled chicken marinated with beet root and spices,FALSE,TRUE
+0,Saffron Chicken Malai Tikka ,Pieces of boneless tender grilled chicken marinated with saffron spices & yogurt,FALSE,TRUE
+0,Naan ,Tandoor baked light bread,FALSE,FALSE
+1,Garlic Naan ,Tandoor baked light bread stuffed with chopped garlic,FALSE,FALSE
+0,Saffron Special Naan ,Our signature naan bread stuffed with raisins & saffron,FALSE,FALSE
+0,Roti ,Baked whole-wheat bread,FALSE,FALSE
+0,Prantha ,Baked multi-layered whole-wheat bread,FALSE,FALSE
+0,Onion Kulcha ,Tandoor bread stuffed with freshly chopped onions and pepper,FALSE,FALSE
+0,Chicken Naan ,Naan stuffed with shredded chicken tikka,FALSE,FALSE
+0,Keema Naan ,Naan stuffed with fresh ground meat,FALSE,FALSE
+0,Bhatura ,Deep-fried white puffed bread,FALSE,FALSE
+0,Poori ,Deep-fried whole-wheat puffed bread,FALSE,FALSE
+2,Rice Pulao ,Basmati rice with peas,TRUE,FALSE
+0,Garden Salad ,"Fresh lettuce, tomatoes, cucumbers",TRUE,TRUE
+1,Raita,Grated cucumbers and carrots in yogurt,FALSE,TRUE
+0,Achaar,Mixed pickle seasoned with spices,TRUE,TRUE
+1,Mango Chutney,"A sweet sauce made with mango, vinegar, sugar and herbs",TRUE,TRUE
+0,Tamarind Chutney,"A sweet sauce made with tamarind, canola oil, sugar and herbs",TRUE,TRUE
+0,Mint Chutney,"A delicious sauce made with mint, coriander, cumin powder and vinegar.",TRUE,TRUE
+0,Pappadam,Paper thin lentil wafers,TRUE,TRUE
+0,Mango Lassi,Ice cold smoothie made with fresh mangos,FALSE,TRUE
+0,Sweet Lassi,Ice cold and refreshing sweet smoothie,FALSE,TRUE
+0,Salt Lassi,Ice cold and refreshing salty smoothie,FALSE,TRUE
+0,Kheer ,Rice pudding,FALSE,TRUE
+0,Rasmali ,Soft homemade cheese-ball cakes in a sweetened milky syrup,FALSE,TRUE
+0,Kulfi ,Pistachio flavored ice cream,FALSE,TRUE
+0,Gajjar Halwa ,Shredded carrots cooked in milk and topped with nuts.,FALSE,TRUE
+0,Gulab Jamun ,Evaporated milk balls served in a natural honey syrup,FALSE,FALSE
+0,Moong Dal Halwa ,Finely ground lentils with nuts,FALSE,FALSE
+0,Vegetable Kebab,"Fresh spinach, peas and potatos",TRUE,FALSE
+0,Chai,Fresh ginger tea infused with cinnamon and cardamom,FALSE,TRUE
+0,Assorted Breads,"Garlic Naan, Onion Kulcha and Stuffed Potato Naan",FALSE,FALSE

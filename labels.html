@@ -1,169 +1,304 @@
 <html>
-<head>
+ <head>
   <style>
-  .label-page {
-    margin: 5px;
-    background-color: lightblue;
-    max-width: 8.5in;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-content: space-between;
+   body {
+  max-width: 8.5in;
+  margin: auto;
+  font-family: Verdana, Arial, Sans-serif;
+}
+.cover-page, .label-page {
+  margin: 0.5in;
+}
+.cover-page {
+  font-size: 1.5em;
+}
+.label-page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+}
+.label-item {
+  height: 5in;
+  width: 3.75in;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.label-item-front, .label-item-back {
+  height: 50%;
+  width: 100%;
+  outline: 0.5mm solid black;
+  position: relative;
+}
+.label-item-back {
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+.label-item-back-text {
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  bottom: 2mm;
+  left: 2mm;
+  right: 2mm;
+  font-size: 0.875em;
+}
+.label-item-title {
+  position: relative;
+  display: block;
+  text-align: center;
+  top: 0.25in;
+  font-size: 1.5em;
+}
+.label-item-name {
+  display: block;
+  text-align: center;
+  font-size: 2.5em;
+  position: relative;
+  top: 0.3in;
+  margin-left: 2mm;
+  margin-right: 2mm;
+}
+.label-item-description {
+  text-align: center;
+  position: relative;
+  top: 0.35in;
+  margin-left: 2mm;
+  margin-right: 2mm;
+  font-size: 0.875em;
+}
+.label-item-allergen-images{
+  flex-direction: row;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+img {
+  width: 0.5in;
+  height: 0.5in;
+}
+@media print {
+  @page {
+    size: letter portrait;
   }
-  .label-item {
-    height: 5in;
-    width: 3.75in;
-    flex-wrap: wrap;
-    flex-direction: column;
+  .cover-page, .label-page {
+    page-break-after: always
   }
-  .label-item-front, .label-item-back {
-    height: 50%;
-    width: 100%;
-    outline: 0.5mm solid black;
-  }
-  .label-item-front {
-    background-color: red;
-    position: relative;
-  }
-  .label-item-back {
-    background-color: green;
-    -webkit-transform:rotate(180deg);
-    -moz-transform:rotate(180deg);
-    -o-transform:rotate(180deg);
-    -ms-transform:rotate(180deg);
-    transform:rotate(180deg);
-  }
-  .label-item-name {
-    /* background-color: yellow; */
-    display: block;
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 2.5em; /* 40px/16=2.5em */
-    position: relative;
-    top: 0.75in;
-  }
-  .label-item-description {
-    text-align: center;
-    position: relative;
-    top: 0.80in;
-  }
-  .label-item-allergen-images{
-    flex-direction: row;
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-  img {
-    width: 0.5in;
-    height: 0.5in;
-  }
-  @media print {
-    @page {
-      size: letter portrait;
-    }
-    .label-page {
-      page-break-after: always
-    }
-  }
+}
   </style>
-</head>
-<body>
-  <div class="label-page">
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          1. Vegetable Pakora
-        </div>
-        <div class="label-item-description">
-          Fritters
-        </div>
-        <div class="label-item-allergen-images">
-          <img src="images/gluten-free.png">
-          <img src="images/vegan.png">
-        </div>
-      </div>
-    </div>
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          2. Samosas
-        </div>
-        <div class="label-item-description">
-          Filled with Potatoes
-        </div>
-      </div>
-    </div>
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          3. Vegetable Pakora
-        </div>
-        <div class="label-item-description">
-          Fritters
-        </div>
-      </div>
-    </div>
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          4. Samosas
-        </div>
-        <div class="label-item-description">
-          Filled with Potatoes
-        </div>
-      </div>
-    </div>
+ </head>
+ <body>
+  <div class="cover-page">
+   <b>
+    Labels
+   </b>
+   <br/>
+   1 Vegetable Samosa
+   <br/>
+   1 Chicken Seekh Kebab
+   <br/>
+   1 Chicken Tikka
+   <br/>
+   1 Vegetable Kebab
+   <br/>
+   1 Mango Ice Cream
+   <br/>
+   1 CHAI ( Tea)
+   <br/>
+   1 Assorted Breads
+   <br/>
+   1 Mango Lassi
+   <br/>
   </div>
   <div class="label-page">
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          1. Vegetable Pakora
-        </div>
-        <div class="label-item-description">
-          Fritters
-        </div>
-      </div>
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
     </div>
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          2. Samosas
-        </div>
-        <div class="label-item-description">
-          Filled with Potatoes
-        </div>
-      </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      Vegetable Samosa
+     </div>
+     <div class="label-item-description">
+      Cumin flavored potatoes &amp; peas in a flaky pastry
+     </div>
+     <div class="label-item-allergen-images">
+      <img src="html-images/vegan.png"/>
+     </div>
     </div>
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          3. Vegetable Pakora
-        </div>
-        <div class="label-item-description">
-          Fritters
-        </div>
-      </div>
+   </div>
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
     </div>
-    <div class="label-item">
-      <div class="label-item-back"></div>
-      <div class="label-item-front">
-        <div class="label-item-name">
-          4. Samosas
-        </div>
-        <div class="label-item-description">
-          Filled with Potatoes
-        </div>
-      </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      Chicken Seekh Kebab
+     </div>
+     <div class="label-item-description">
+      Tandoor-roasted ground chicken seasoned with mint &amp; herbs rolled on a skewer
+     </div>
+     <div class="label-item-allergen-images">
+      <img src="html-images/gluten-free.png"/>
+     </div>
     </div>
+   </div>
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
+    </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      Chicken Tikka
+     </div>
+     <div class="label-item-description">
+      Pieces of boneless tender grilled chicken marinated with beet root and spices
+     </div>
+     <div class="label-item-allergen-images">
+      <img src="html-images/gluten-free.png"/>
+     </div>
+    </div>
+   </div>
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
+    </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      Vegetable Kebab
+     </div>
+     <div class="label-item-description">
+     </div>
+     <div class="label-item-allergen-images">
+     </div>
+    </div>
+   </div>
   </div>
-</body>
+  <div class="label-page">
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
+    </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      Mango Ice Cream
+     </div>
+     <div class="label-item-description">
+     </div>
+     <div class="label-item-allergen-images">
+     </div>
+    </div>
+   </div>
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
+    </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      CHAI ( Tea)
+     </div>
+     <div class="label-item-description">
+     </div>
+     <div class="label-item-allergen-images">
+     </div>
+    </div>
+   </div>
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
+    </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      Assorted Breads
+     </div>
+     <div class="label-item-description">
+     </div>
+     <div class="label-item-allergen-images">
+     </div>
+    </div>
+   </div>
+   <div class="label-item">
+    <div class="label-item-back">
+     <div class="label-item-back-text">
+      A Saffron Thread
+      <br/>
+      www.asaffronthread.com
+      <br/>
+     </div>
+    </div>
+    <div class="label-item-front">
+     <div class="label-item-title">
+      A Saffron Thread
+     </div>
+     <div class="label-item-name">
+      Mango Lassi
+     </div>
+     <div class="label-item-description">
+     </div>
+     <div class="label-item-allergen-images">
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
